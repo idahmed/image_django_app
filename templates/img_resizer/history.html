@@ -1,0 +1,35 @@
+{% extends 'img_resizer/base.html' %} {% block content %}
+
+<div class="card">
+  <div class="card-body">
+    <h1 class="card-title">Image Details</h1>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Image Name</th>
+          <th>date</th>
+          <th>Image Original Width</th>
+          <th>Image Original Height</th>
+          <th>Image New Width</th>
+          <th>Image New Height</th>
+          <th>Download</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for image in images %}
+        <tr>
+          <td>{{ image.name }}</td>
+          <td>{{ image.uploaded_at }}</td>
+          <td>{{ image.original_width }}</td>
+          <td>{{ image.original_height }}</td>
+          <td>{{ image.new_width }}</td>
+          <td>{{ image.new_height }}</td>
+          <td><a href="{{ image.image.url }}" class="btn btn-primary" download="{{ image.image.name }}">Download</a></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+
+{% endblock %}

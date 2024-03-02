@@ -1,0 +1,20 @@
+{% extends 'img_resizer/base.html' %} {% block content %}
+
+<div class="card">
+  <div style="display: flex; align-items: start">
+    <div class="card-body">
+      <h1 class="card-title">Image Details</h1>
+      <p class="card-text">Image Name: {{ image.name }}</p>
+      <p class="card-text">Image original width: {{ image.original_width }}</p>
+      <p class="card-text">Image original height: {{ image.original_height }}</p>
+      <p class="card-text">Image new width: {{ image.new_width }}</p>
+      <p class="card-text">Image new height: {{ image.new_height }}</p>
+    </div>
+    <div>
+      <img src="{{image.image.url}}" alt="" width="500" height="500" />
+    </div>
+  </div>
+  <a href="{{ image.image.url }}" class="btn btn-primary" download="{{ image.image.name }}">Download</a>
+</div>
+
+{% endblock %}
