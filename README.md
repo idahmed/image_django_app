@@ -18,18 +18,19 @@
 pipenv install && pipenv shell
 ```
 
-# start the server
-```
-./manage.py runserver
-```
-
 # run the migrations 
+```
 ./manage.py migrate
-
+```
 
 # load test user to the db
 ```
 ./manage.py loaddata fixtures/user_data.json
+```
+
+# start the server
+```
+./manage.py runserver
 ```
 
 # go to the browser
