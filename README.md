@@ -1,4 +1,3 @@
-
 # Django Image resizer
 
 [overview here]
@@ -13,21 +12,27 @@
 
 ### installation 
 
-```
-# first install and start the env
-pipenv install && pipenv shell
 
+# first install and start the env
+```
+pipenv install && pipenv shell
+```
 
 # start the server
+```
 ./manage.py runserver
+```
 
 # run the migrations 
 ./manage.py migrate
 
 
 # load test user to the db
+```
 ./manage.py loaddata fixtures/user_data.json
+```
 
 # go to the browser
+```
 http://localhost:8000
 ```
