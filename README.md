@@ -37,3 +37,14 @@ pipenv install && pipenv shell
 ```
 http://localhost:8000
 ```
+
+# user credentials
+
+email: 
+```
+test@test.com
+```
+password: 
+```
+testpassword
+```
